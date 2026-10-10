@@ -1,0 +1,836 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Adaptado para DESTINIA - Turismo Caribe Hondureño
+-->
+<html>
+	<head>
+		<title>DESTINIA | Caribe Hondureño</title>
+		<link rel="icon" type="image/png" href="logo_destinia.png" />
+		<link rel="shortcut icon" type="image/png" href="logo_destinia.png" />
+		<link rel="apple-touch-icon" href="logo_destinia.png" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Descubre el Caribe Hondureño con DESTINIA: Roatán, Utila, Cayos Cochinos, Pico Bonito, Tela y más. Experiencias únicas de playa, buceo, naturaleza y cultura garífuna." />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body, p, li {
+				font-family: 'Poppins', sans-serif !important;
+				font-size: 1.1em;
+				line-height: 1.7;
+			}
+			h1, h2, h3, h4, h5, h6,
+			.major h2,
+			header.major h2 {
+				font-family: 'Montserrat', sans-serif !important;
+				font-weight: 700;
+				letter-spacing: -0.5px;
+			}
+			#header h1 {
+				font-size: 2.6em !important;
+				line-height: 1.25 !important;
+				margin-bottom: 0.5em;
+			}
+			#header p {
+				font-size: 1.2em !important;
+			}
+			.major h2 {
+				font-size: 1.9em !important;
+			}
+			h3 {
+				font-size: 1.35em !important;
+				font-weight: 600;
+			}
+			#header .logo-destinia {
+				display: block;
+				margin: 0 auto 1.6em auto;
+				max-width: 200px;
+				width: 100%;
+				height: auto;
+			}
+			#header {
+				background-image: url('fondo_turismo.jpg');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			#one .image.fit img {
+				width: 100%;
+				max-height: 400px;
+				object-fit: cover;
+				border-radius: 6px;
+			}
+			#three .image.fit img {
+				width: 100%;
+				height: 240px;
+				object-fit: cover;
+				border-radius: 6px;
+				transition: transform 0.3s ease;
+			}
+			#three .image.fit img:hover {
+				transform: translateY(-5px);
+			}
+			/* Sección Two - fondo + overlay */
+			#two.main.style2 {
+				position: relative;
+				background-image: url('fondo_info.jpe');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				padding: 4em 0 3.5em 0 !important;
+				color: #fff;
+			}
+			#two.main.style2::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.55);
+				z-index: 1;
+			}
+			#two .container {
+				position: relative;
+				z-index: 2;
+			}
+			#two h2, #two p, #two strong {
+				color: #ffffff !important;
+				text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+			}
+			#two .major-icons .icon {
+				color: #ffffff !important;
+			}
+			/* ===== NUEVAS SECCIONES DE HOTELES ===== */
+			.hotel-section {
+				padding: 4.5em 0;
+			}
+			.hotel-card {
+				background: #fff;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+				margin-bottom: 2.5em;
+				transition: transform 0.3s ease;
+			}
+			.hotel-card:hover {
+				transform: translateY(-6px);
+			}
+			.hotel-card img {
+				width: 100%;
+				height: 220px;
+				object-fit: cover;
+			}
+			.hotel-card .content {
+				padding: 1.5em 1.8em 1.8em;
+			}
+			.hotel-card h3 {
+				margin: 0 0 0.4em 0;
+				font-size: 1.4em !important;
+			}
+			.hotel-card .price {
+				font-size: 1.25em;
+				font-weight: 700;
+				color: #2a7d6f;
+				margin-bottom: 0.6em;
+			}
+			.hotel-card .rating {
+				color: #f5a623;
+				font-size: 0.95em;
+				margin-bottom: 0.8em;
+			}
+			.hotel-card p {
+				font-size: 0.98em;
+				margin-bottom: 0.7em;
+			}
+			.hotel-card .how-to {
+				font-size: 0.92em;
+				color: #555;
+				border-top: 1px solid #eee;
+				padding-top: 0.9em;
+				margin-top: 0.9em;
+			}
+			/* ===== FIX: texto visible en las tarjetas de hoteles ===== */
+			.hotel-card {
+				color: #333 !important;
+			}
+			.hotel-card h3,
+			.hotel-card p,
+			.hotel-card strong {
+				color: #333 !important;
+			}
+			.hotel-card .price {
+				color: #2a7d6f !important;
+				font-weight: 700;
+			}
+			.hotel-card .rating {
+				color: #f5a623 !important;
+			}
+			.hotel-card .how-to {
+				color: #555 !important;
+				border-top: 1px solid #eee;
+			}
+			/* ===== Sección Cayos Cochinos - fondo personalizado ===== */
+			#cayos.main.style2 {
+				position: relative;
+				background-image: url('fondo_cayos.jpg');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				padding: 4.5em 0 !important;
+				color: #fff;
+			}
+			#cayos.main.style2::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.55);
+				z-index: 1;
+			}
+			#cayos .container {
+				position: relative;
+				z-index: 2;
+			}
+			#cayos header.major h2,
+			#cayos > .container > p {
+				color: #ffffff !important;
+				text-shadow: 0 1px 3px rgba(0,0,0,0.45);
+			}
+			/* ===== Sección final (CTA) - fondo personalizado ===== */
+			#four.main.style2 {
+				position: relative;
+				background-image: url('fondo_final.jpg');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				padding: 4.5em 0 !important;
+				color: #fff;
+			}
+			#four.main.style2::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.55);
+				z-index: 1;
+			}
+			#four .container {
+				position: relative;
+				z-index: 2;
+			}
+			#four header.major h2,
+			#four p {
+				color: #ffffff !important;
+				text-shadow: 0 1px 3px rgba(0,0,0,0.45);
+			}
+			/* ===== TARJETAS DE ACTIVIDADES ===== */
+			.activity-section {
+				margin-top: 3.5em;
+				padding-top: 2em;
+				border-top: 1px solid rgba(0,0,0,0.08);
+			}
+			.activity-card {
+				background: #fff;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+				margin-bottom: 2.5em;
+				transition: transform 0.3s ease;
+				color: #333 !important;
+			}
+			.activity-card:hover {
+				transform: translateY(-6px);
+			}
+			.activity-card video {
+				width: 100%;
+				height: 220px;
+				object-fit: cover;
+				display: block;
+				background: #111;
+			}
+			.activity-card .content {
+				padding: 1.5em 1.8em 1.8em;
+			}
+			.activity-card h3 {
+				margin: 0 0 0.4em 0;
+				font-size: 1.35em !important;
+				color: #333 !important;
+			}
+			.activity-card .price {
+				font-size: 1.2em;
+				font-weight: 700;
+				color: #2a7d6f !important;
+				margin-bottom: 0.6em;
+			}
+			.activity-card p {
+				font-size: 0.98em;
+				margin-bottom: 0.7em;
+				color: #333 !important;
+			}
+			.activity-card .location {
+				font-size: 0.92em;
+				color: #555 !important;
+				border-top: 1px solid #eee;
+				padding-top: 0.9em;
+				margin-top: 0.9em;
+			}
+			/* Para que se vea bien también en secciones style2 */
+			#cayos .activity-card,
+			#cayos .activity-card h3,
+			#cayos .activity-card p,
+			#cayos .activity-card strong {
+				color: #333 !important;
+			}
+
+
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<section id="header">
+			<div class="inner">
+				<img src="logo_destinia.png" alt="DESTINIA - Caribe Hondureño" class="logo-destinia" />
+				<h1>Bienvenido a <strong>DESTINIA</strong><br />
+				Descubre el Caribe Hondureño desde otra perspectiva</h1>
+				<p>Playas de arena blanca, el segundo arrecife de coral más grande del mundo,<br />
+				selva tropical y la vibrante cultura garífuna te esperan.</p>
+				<ul class="actions special">
+					<li><a href="#one" class="button scrolly">Descubre más</a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- One -->
+		<section id="one" class="main style1">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<header class="major">
+							<h2>El Caribe Hondureño<br />
+							en su máxima expresión</h2>
+						</header>
+						<p>
+							En <strong>DESTINIA</strong> te llevamos a explorar los departamentos de Atlántida, Colón, Islas de la Bahía y Gracias a Dios. 
+							Desde las playas paradisíacas de Roatán y Utila hasta la selva de Pico Bonito, los Cayos Cochinos y la remota Mosquitia.
+						</p>
+						<p>
+							Combinamos aventura, relax, buceo de clase mundial y experiencias culturales auténticas con comunidades garífunas y miskitas.
+						</p>
+					</div>
+					<div class="col-6 col-12-medium imp-medium">
+						<span class="image fit">
+							<img src="img_info.jpg" alt="Parque Nacional Pico Bonito" />
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Two -->
+		<section id="two" class="main style2">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
+						<ul class="major-icons">
+							<li><span class="icon solid style1 major fa-water"></span></li>
+							<li><span class="icon solid style2 major fa-fish"></span></li>
+							<li><span class="icon solid style3 major fa-mountain"></span></li>
+							<li><span class="icon solid style4 major fa-users"></span></li>
+							<li><span class="icon solid style5 major fa-ship"></span></li>
+							<li><span class="icon solid style6 major fa-map-marked-alt"></span></li>
+						</ul>
+					</div>
+					<div class="col-6 col-12-medium">
+						<header class="major">
+							<h2>Experiencias que<br />
+							transforman tu viaje</h2>
+						</header>
+						<p>El Caribe hondureño ofrece una de las combinaciones más completas de turismo en Centroamérica. Aquí puedes vivir en un mismo viaje playas de arena blanca, buceo de categoría mundial, selva tropical, ríos de aguas cristalinas y una cultura viva que se siente en cada pueblo.</p>
+						<p><strong>Buceo y snorkel:</strong> Roatán y Utila forman parte del Sistema Arrecifal Mesoamericano, el segundo más grande del planeta. Utila es reconocida por sus precios accesibles y avistamiento de tiburones ballena. Roatán destaca por paredes verticales y naufragios.</p>
+						<p><strong>Aventura:</strong> Rafting en el Río Cangrejal, canopy, senderismo a cascadas y exploración del Parque Nacional Pico Bonito. En Tela, Punta Sal combina playas vírgenes y manglares.</p>
+						<p><strong>Cultura garífuna:</strong> Sambo Creek, Tornabé y Punta Gorda te permiten vivir la música punta, el tapado y las tradiciones auténticas.</p>
+						<p><strong>Islas y cayos:</strong> Cayos Cochinos para snorkel virgen, Guanaja más tranquila y la Mosquitia para aventura remota.</p>
+						<p>En <strong>DESTINIA</strong> diseñamos itinerarios a tu medida con operadores locales y experiencias responsables.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Three - Destinos -->
+		<section id="three" class="main style1 special">
+			<div class="container">
+				<header class="major">
+					<h2>Destinos imprescindibles del Caribe Hondureño</h2>
+				</header>
+				<p>Elige tu próxima aventura con DESTINIA</p>
+				<div class="row gtr-150">
+					<div class="col-4 col-12-medium">
+						<span class="image fit">
+							<img src="roatan.jpe" alt="Roatán" />
+						</span>
+						<h3>Roatán & Islas de la Bahía</h3>
+						<p>Playas de arena blanca, West Bay, buceo de clase mundial y la mejor infraestructura turística.</p>
+						<ul class="actions special">
+							<li><a href="#roatan" class="button scrolly">Más información</a></li>
+						</ul>
+					</div>
+					<div class="col-4 col-12-medium">
+						<span class="image fit">
+							<img src="cayos.jpe" alt="Cayos Cochinos" />
+						</span>
+						<h3>Cayos Cochinos</h3>
+						<p>Archipiélago protegido con arrecifes prístinos, playas vírgenes y comunidades garífunas.</p>
+						<ul class="actions special">
+							<li><a href="#cayos" class="button scrolly">Más información</a></li>
+						</ul>
+					</div>
+					<div class="col-4 col-12-medium">
+						<span class="image fit">
+							<img src="utila.jpg" alt="Utila" />
+						</span>
+						<h3>La Ceiba, Tela & Utila</h3>
+						<p>Pico Bonito, Río Cangrejal, Punta Sal y el mejor buceo económico del mundo en Utila.</p>
+						<ul class="actions special">
+							<li><a href="#ceiba-utila" class="button scrolly">Más información</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== SECCIÓN ROATÁN ========== -->
+		<section id="roatan" class="main style1 hotel-section">
+			<div class="container">
+				<header class="major">
+					<h2>Roatán – Hoteles & Paquetes</h2>
+				</header>
+				<p>La isla más desarrollada del Caribe hondureño. Aquí tienes opciones desde hostales hasta resorts de lujo.</p>
+				
+				<div class="row gtr-150">
+					<!-- Hotel 1 -->
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="Infinity_Bay_Resort.jpg" alt="Infinity Bay Resort" />
+							<div class="content">
+								<h3>Infinity Bay Spa & Beach Resort</h3>
+								<div class="rating">★★★★★ (4.8/5) – Excelente</div>
+								<div class="price">Desde L 5,500 / noche</div>
+								<p>Resort frente a West Bay con piscina infinity, spa, buceo y restaurantes. Ideal para parejas y familias.</p>
+								<p><strong>Paquete recomendado:</strong> 4 noches + 2 inmersiones + traslados → desde L 22,250 por persona.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> 15 min en taxi desde el aeropuerto de Roatán (RTB) o 20 min desde el muelle de ferry.
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Hotel 2 -->
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="Paradise_Beach_Resort.jpg" alt="Paradise Beach Resort" />
+							<div class="content">
+								<h3>Paradise Beach Hotel</h3>
+								<div class="rating">★★★★☆ (4.5/5) – Muy bueno</div>
+								<div class="price">Desde L 3,625 / noche</div>
+								<p>Ubicado en West End, ambiente relajado, excelente para buceadores. Buena relación calidad-precio.</p>
+								<p><strong>Paquete recomendado:</strong> 5 noches + Open Water o Advanced + comidas → desde L 19,500.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> Taxi compartido o privado desde el aeropuerto (aprox. 25 min). También accesible desde el ferry.
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Hotel 3 -->
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="Barefoot_Cay.jpg" alt="Barefoot Cay" />
+							<div class="content">
+								<h3>Barefoot Cay Resort</h3>
+								<div class="rating">★★★★★ (4.9/5) – Excepcional</div>
+								<div class="price">Desde L 7,000 / noche</div>
+								<p>Boutique privado en un cayo pequeño. Ideal para desconexión total y snorkel desde la puerta.</p>
+								<p><strong>Paquete recomendado:</strong> 3 noches all-inclusive + traslados en lancha → desde L 28,750 por pareja.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> Lancha privada desde French Harbour (15 min). Coordinamos el traslado desde el aeropuerto.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ACTIVIDADES ROATÁN -->
+				<div class="activity-section">
+					<header class="major">
+						<h2>Actividades destacadas en Roatán</h2>
+					</header>
+					<div class="row gtr-150">
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="buceo_roatan.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>Buceo & Snorkel</h3>
+									<div class="price">Desde L 1,125</div>
+									<p>Explora el segundo arrecife de coral más grande del mundo. Paredes verticales, naufragios y vida marina increíble.</p>
+									<div class="location">
+										<strong>Dónde:</strong> West Bay, West End y Mary's Place<br>
+										<strong>Duración:</strong> 2-3 horas por inmersión
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="westbay.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>West Bay Beach</h3>
+									<div class="price">Gratis – L 375 (sillas)</div>
+									<p>Una de las playas más hermosas del Caribe. Arena blanca, aguas cristalinas y ambiente relajado.</p>
+									<div class="location">
+										<strong>Dónde:</strong> West Bay<br>
+										<strong>Ideal para:</strong> Familias, snorkel desde la orilla y atardeceres
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="kayak_roatan.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>Kayak & Paddleboard</h3>
+									<div class="price">Desde L 625</div>
+									<p>Recorre la costa y manglares en kayak o stand-up paddle. Ideal al atardecer.</p>
+									<div class="location">
+										<strong>Dónde:</strong> West End y Half Moon Bay<br>
+										<strong>Duración:</strong> 1-2 horas
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== SECCIÓN CAYOS COCHINOS ========== -->
+		<section id="cayos" class="main style2 hotel-section">
+			<div class="container">
+				<header class="major">
+					<h2>Cayos Cochinos – Alojamiento & Experiencias</h2>
+				</header>
+				<p>Un destino más rústico y protegido. Las opciones de hospedaje son limitadas y auténticas.</p>
+				
+				<div class="row gtr-150">
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="cabanas.jpe" alt="Cabañas Cayo Timón" />
+							<div class="content">
+								<h3>Cabañas Cayo Timón</h3>
+								<div class="rating">★★★★☆ (4.6/5)</div>
+								<div class="price">Desde L 2,375 / noche</div>
+								<p>Cabañas sencillas frente al mar en un cayo pequeño. Comida local incluida en la mayoría de paquetes.</p>
+								<p><strong>Paquete:</strong> Día completo desde La Ceiba + almuerzo + snorkel → L 1,875. Noche extra + L 2,250.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> Lancha desde La Ceiba o Sambo Creek (45-60 min). Solo se llega por mar.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="plantation_beach.jpg" alt="Plantation Beach Resort" />
+							<div class="content">
+								<h3>Plantation Beach Resort</h3>
+								<div class="rating">★★★★☆ (4.4/5)</div>
+								<div class="price">Desde L 3,250 / noche</div>
+								<p>El alojamiento más conocido del archipiélago. Ambiente familiar y acceso directo a arrecifes.</p>
+								<p><strong>Paquete:</strong> 2 noches + comidas + snorkel ilimitado → desde L 8,000 por persona.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> Salidas diarias desde La Ceiba. Coordinamos el boat transfer.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="chachahuate.jpe" alt="Cayo Chachahuate" />
+							<div class="content">
+								<h3>Experiencia en Chachahuate</h3>
+								<div class="rating">★★★★★ (4.7/5)</div>
+								<div class="price">Desde L 2,125 / noche</div>
+								<p>Hospedaje en comunidad garífuna. Experiencia cultural auténtica con comidas tradicionales.</p>
+								<p><strong>Paquete:</strong> Tour de día + pernocta opcional + cena garífuna → desde L 2,750.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> Lancha desde La Ceiba o Sambo Creek. Requiere reserva previa.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ACTIVIDADES CAYOS COCHINOS -->
+				<div class="activity-section">
+					<header class="major">
+						<h2>Actividades destacadas en Cayos Cochinos</h2>
+					</header>
+					<div class="row gtr-150">
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="snorkel_cayos.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>Snorkel en arrecifes prístinos</h3>
+									<div class="price">Desde L 1,875 (día completo)</div>
+									<p>Uno de los mejores snorkels del Caribe. Agua cristalina y corales casi vírgenes.</p>
+									<div class="location">
+										<strong>Dónde:</strong> Alrededor de Cayo Menor y Cayo Mayor<br>
+										<strong>Incluye:</strong> Equipo + guía + almuerzo
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="chachahuate.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>Comunidad Garífuna Chachahuate</h3>
+									<div class="price">Desde L 375 – L 625</div>
+									<p>Visita el pueblo garífuna más auténtico. Música, comida tradicional y playa de ensueño.</p>
+									<div class="location">
+										<strong>Dónde:</strong> Cayo Chachahuate<br>
+										<strong>Ideal para:</strong> Cultura + playa + fotos
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="playa_cayos.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>Playas vírgenes</h3>
+									<div class="price">Incluido en tours</div>
+									<p>Arena blanca y aguas turquesas sin multitudes. Perfecto para desconectarse.</p>
+									<div class="location">
+										<strong>Dónde:</strong> Cayo Timón y playas de Cayo Menor<br>
+										<strong>Recomendado:</strong> Combinar con snorkel
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== SECCIÓN LA CEIBA / TELA / UTILA ========== -->
+		<section id="ceiba-utila" class="main style1 hotel-section">
+			<div class="container">
+				<header class="major">
+					<h2>La Ceiba, Tela & Utila – Hoteles & Paquetes</h2>
+				</header>
+				<p>Base perfecta para combinar selva, playa y buceo económico.</p>
+				
+				<div class="row gtr-150">
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="lodge.jpe" alt="Lodge at Pico Bonito" />
+							<div class="content">
+								<h3>The Lodge at Pico Bonito</h3>
+								<div class="rating">★★★★★ (4.9/5)</div>
+								<div class="price">Desde L 4,875 / noche</div>
+								<p>Eco-lodge de lujo en la selva. Ideal para naturaleza, aves y cascadas.</p>
+								<p><strong>Paquete:</strong> 3 noches + tours de senderismo + comidas → desde L 17,000.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> 30-40 min en taxi desde el aeropuerto de La Ceiba o desde el centro.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="utila_lodge.jpe" alt="Utila Lodge" />
+							<div class="content">
+								<h3>Utila Lodge</h3>
+								<div class="rating">★★★★☆ (4.6/5)</div>
+								<div class="price">Desde L 2,750 / noche (con buceo)</div>
+								<p>Clásico dive resort. Excelente para certificarse y buscar tiburón ballena.</p>
+								<p><strong>Paquete:</strong> 5 noches + Open Water + comidas → desde L 16,250.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> Ferry desde La Ceiba (1 hora) o vuelo corto desde Roatán.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="hotel-card">
+							<img src="telamar.jpe" alt="Telamar Resort" />
+							<div class="content">
+								<h3>Hotel Telamar</h3>
+								<div class="rating">★★★★☆ (4.3/5)</div>
+								<div class="price">Desde L 2,375 / noche</div>
+								<p>Resort histórico frente a la playa de Tela. Buena base para Punta Sal y Lancetilla.</p>
+								<p><strong>Paquete:</strong> 3 noches + tour a Punta Sal + desayunos → desde L 7,750.</p>
+								<div class="how-to">
+									<strong>Cómo llegar:</strong> 1.5 h en bus o taxi desde San Pedro Sula, o 1 h desde La Ceiba.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ACTIVIDADES LA CEIBA / TELA / UTILA -->
+				<div class="activity-section">
+					<header class="major">
+						<h2>Actividades destacadas</h2>
+					</header>
+					<div class="row gtr-150">
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="rafting.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>Rafting Río Cangrejal</h3>
+									<div class="price">Desde L 1,125</div>
+									<p>Uno de los mejores ríos de Centroamérica para rafting. Rápidos clase II-III y selva impresionante.</p>
+									<div class="location">
+										<strong>Dónde:</strong> Parque Nacional Pico Bonito (La Ceiba)<br>
+										<strong>Duración:</strong> Medio día
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="utila_dive.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>Buceo en Utila</h3>
+									<div class="price">Desde L 875 / inmersión</div>
+									<p>El destino más económico del mundo para certificarse. Posibilidad de ver tiburón ballena.</p>
+									<div class="location">
+										<strong>Dónde:</strong> Utila<br>
+										<strong>Ideal para:</strong> Principiantes y buscadores de tiburón ballena
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 col-12-medium">
+							<div class="activity-card">
+								<video autoplay muted loop playsinline>
+									<source src="punta_sal.mp4" type="video/mp4">
+								</video>
+								<div class="content">
+									<h3>Punta Sal & Parque Jeannette Kawas</h3>
+									<div class="price">Desde L 1,375</div>
+									<p>Playas vírgenes, manglares, monos y delfines. Uno de los tours más hermosos de la zona.</p>
+									<div class="location">
+										<strong>Dónde:</strong> Tela<br>
+										<strong>Duración:</strong> Día completo
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Four - CTA -->
+		<section id="four" class="main style2 special">
+			<div class="container">
+				<header class="major">
+					<h2>¿Listo para vivir el Caribe Hondureño?</h2>
+				</header>
+				<p>Contáctanos y diseñamos juntos tu viaje ideal: playas, buceo, selva, cultura o una combinación perfecta.</p>
+				<ul class="actions special">
+					<li><a href="https://destinia.com/" class="button wide primary">Solicitar cotización</a></li>
+					<li><a href="#three" class="button wide scrolly">Ver destinos</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/share/19Xtgh5Mc1/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/destinia_com?stkn=ZnI1aHdjcDZhOTlv" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; DESTINIA - Turismo Caribe Hondureño</li>
+				<li>Diseño basado en <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</section>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Música de fondo -->
+		<audio id="bg-music" autoplay loop preload="auto">
+			<source src="musica_fondo.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento de audio.
+		</audio>
+
+		<!-- Script para forzar la reproducción de la música de fondo -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const audio = document.getElementById('bg-music');
+				if (audio) {
+					const playPromise = audio.play();
+					
+					if (playPromise !== undefined) {
+						playPromise.catch(function(error) {
+							console.log('Autoplay bloqueado. Se reanudará con la primera interacción.');
+							
+							const resumeAudio = function() {
+								audio.play().catch(function() {});
+								document.removeEventListener('click', resumeAudio);
+								document.removeEventListener('touchstart', resumeAudio);
+								document.removeEventListener('keydown', resumeAudio);
+							};
+							
+							document.addEventListener('click', resumeAudio);
+							document.addEventListener('touchstart', resumeAudio);
+							document.addEventListener('keydown', resumeAudio);
+						});
+					}
+				}
+			});
+
+			// Detener la música al salir de la página
+			window.addEventListener('beforeunload', function() {
+				const audio = document.getElementById('bg-music');
+				if (audio) {
+					audio.pause();
+					audio.currentTime = 0;
+				}
+			});
+		</script>
+
+
+	</body>
+</html>
